@@ -2,6 +2,7 @@ class MachinesController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
 
   def index
+    @machines = Machine.all
   end
 
   def show
