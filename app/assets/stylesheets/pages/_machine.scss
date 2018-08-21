@@ -1,0 +1,31 @@
+.container .img img {
+  width: 100%;
+  height: auto;
+}
+.tophead {
+  display: flex;
+  justify-content: space-around;
+  background-color: $gray;
+  color: white;
+  padding: 15px;
+}
+.stick {
+  display: none;
+}
+.fade-in {
+  display: flex!important;
+  position: sticky;
+  top: 0px;
+}
+.btn-block {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+.btn-cta-primary {
+    background-color: #14bea0;
+    color: #fff;
+}
+.left-nav {
+  display: flex;
+}

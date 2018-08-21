@@ -19,6 +19,7 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'devise'
 gem 'faker', '~> 1.6', '>= 1.6.6'
+gem 'gretel', '~> 3.0', '>= 3.0.9'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

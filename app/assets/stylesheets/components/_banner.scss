@@ -1,7 +1,7 @@
 .banner {
   position: relative;
   background-size: cover;
-  height: 100vh;
+  height: calc(100vh - 70px);
   .title {
     position: absolute;
     min-width: 530px;
