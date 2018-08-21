@@ -8,6 +8,8 @@ class MachinesController < ApplicationController
   end
 
   def new
+    @machine = Machine.new
+    @user = current_user
   end
 
   def create
@@ -21,4 +23,11 @@ class MachinesController < ApplicationController
 
   def destroy
   end
+
+  def list
+    @current_user = current_user
+    @current_user_id = current_user.id
+    # @myMachines = Machine.where({|machine| machine.user_id == current_user})
+  end
+
 end
