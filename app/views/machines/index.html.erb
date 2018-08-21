@@ -1,4 +1,11 @@
-<h1>Machines#index</h1>
-<p>Find me in app/views/machines/index.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(-120deg, rgba(63, 232, 171, 0.2), rgba(144, 124, 255, 0.2)), url('/assets/banner-tractor.png');;">
+  <div class="title">
+    <h1>Find the <mark>equipment</mark> <br>you need</h1>
+    <p>In the right place, at the right price</p>
+    <%= form_tag(machines_path, :method => "get", id: "search-home") do %>
+      <%= image_tag "search.svg", height: 22 %>
+      <%= text_field_tag :search, params[:search], placeholder: "I want to rent a tractor.." %>
+    <% end %>
+  </div>
+</div>
 
-<button class="btn btn-primary">Test</button>
