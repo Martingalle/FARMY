@@ -2,3 +2,53 @@
 body {
   background-color: $white;
 }
+.info-box-image {
+  img {
+    margin: 20px;
+  }
+}
+h4 {
+  margin: 20px 0 20px 0;
+  }
+p {
+  margin: 10px;
+  }
+.why {
+  padding-bottom: 60px;
+}
+.headline {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  height: 290px;
+  background: $green;
+  overflow: hidden;
+  &:before {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  bottom: 135%;
+  left: 60%;
+  z-index: 0;
+  background: url(/assets/background.svg) 0 0 repeat;
+  -webkit-transform: rotate(-30deg);
+  -moz-transform: rotate(-30deg);
+  -ms-transform: rotate(-30deg);
+  -o-transform: rotate(-30deg);
+  transform: rotate(-30deg);
+  background-repeat: no-repeat;
+  opacity: 0.7;
+  }
+  h2 {
+    font-weight: 500;
+    color: white;
+    line-height: 50px;
+    z-index: 2;
+  }
+}
+.home {
+  padding-bottom: 40px;
+}

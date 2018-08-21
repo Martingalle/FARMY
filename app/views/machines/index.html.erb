@@ -8,8 +8,8 @@
     <% end %>
   </div>
 </div>
-<div class="container">
-  <div class="row">
+<div class="container background">
+  <div class="row" style="position: relative;">
     <h2 class="text-center"><mark>Why use FARMY?</mark></h2>
     <!-- First row -->
     <div class="row">
@@ -56,4 +56,25 @@
       <div class="clearfix visible-sm"></div>
     </div>
   </div>
+</div>
+<div class="headline text-center">
+  <h2>To prefer <strong>leasing</strong> to debt is <br>to <strong>preserve</strong> your cash flow.</h2>
+</div>
+<div class="container home">
+  <row>
+    <h2 class="text-center"><mark>Our last equipments</mark></h2>
+      <% @machines.first(6).each do |machine| %>
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('');">
+            <div class="card-category">Popular</div>
+            <div class="card-description">
+              <h2><%= machine.name %></h2>
+              <p><%= machine.location %></p>
+            </div>
+            <img class="card-user" src="https://avatars2.githubusercontent.com/u/39128210?s=460&v=4">
+            <a class="card-link" href="#" ></a>
+          </div>
+        </div>
+      <% end %>
+  </row>
 </div>

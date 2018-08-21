@@ -16,12 +16,9 @@ puts 'starting to populate the db'
   password= Faker::Internet.password
   user = User.create!(name: name, email: email, password: password)
 
-
-  
+ Homepage
 end
-
 puts 'created all users'
-
 puts 'creating machines'
 
 10.times do |machine|
