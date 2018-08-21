@@ -7,16 +7,20 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require 'faker'
+
 puts 'starting to populate the db'
+
 50.times do |user|
   name= Faker::Name.name
   email= Faker::Internet.email
   password= Faker::Internet.password
   user = User.create!(name: name, email: email, password: password)
 
+ Homepage
 end
 puts 'created all users'
 puts 'creating machines'
+
 10.times do |machine|
   makes = ["Massey-Ferguson", "New Holland", "International", "Bobard", "McCormick", "Kobatsu", "Manitou", "John Deere", "Deutz-Fahr", "Someca"]
   name = makes.sample
@@ -27,4 +31,5 @@ puts 'creating machines'
   ids = User.pluck(:id)
   machine = Machine.create!(name: name, location: location, user_id: ids.sample)
 end
+
 puts 'finished creating the machines'

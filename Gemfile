@@ -18,6 +18,7 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'devise'
+gem 'faker'
 
 gem 'faker', '~> 1.6', '>= 1.6.6'
 
