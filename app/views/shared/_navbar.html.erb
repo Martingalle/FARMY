@@ -1,17 +1,21 @@
 <div class="navbar-wagon">
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%= image_tag "logo.png", height: 50 %>
+    <%= image_tag "logo.svg", height: 50 %>
+  <% end %>
+  <%= form_tag(machines_path, :method => "get", id: "search-form") do %>
+    <%= image_tag "search.svg", height: 22 %>
+    <%= text_field_tag :search, params[:search], placeholder: "I want to rent a tractor.." %>
   <% end %>
 
   <!-- Right Navigation -->
-  <div class="navbar-wagon-right hidden-xs hidden-sm">
+  <div class="navbar-wagon-right hidden-xs hidden-sm pullDown">
 
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "Add a tractor", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Messages", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <div class="pullDown"><%= link_to "+ Add a machine", new_machine_path, class: "navbar-wagon-item navbar-wagon-link active" %></div>
+      <div class="pullDown"><%= link_to "Messages", "#", class: "navbar-wagon-item navbar-wagon-link" %></div>
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
@@ -38,7 +42,8 @@
       </div>
     <% else %>
       <!-- Login link (when logged out) -->
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to t(".sign_in", default: "Sign in"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to t(".sign_up", default: "Sign up"), new_user_registration_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <% end %>
   </div>
 
