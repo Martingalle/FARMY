@@ -26,13 +26,19 @@ puts 'creating machines'
 
 10.times do |machine|
   makes = ["Massey-Ferguson", "New Holland", "International", "Bobard", "McCormick", "Kobatsu", "Manitou", "John Deere", "Deutz-Fahr", "Someca"]
-  name = makes.sample
-  makes.delete(name)
+  make = makes.sample
+  makes.delete(make)
   cities = ["Nevers", "Bourgoin-Jallieu", "Dinard", "Auxerre", "Nantua", "Cassis", "Romorantin-Lanthenay", "Dinard", "Colmar", "Dunkerque" ]
   location = cities.sample
   cities.delete(location)
+  year = rand(1990..2018)
+  categories = ["Tractor","Combine Harvester","Sower","Sprayer","Shredder","Spreader","Rolls","Sidewinder","Vineyard tractor"]
+  roues_motrices = [2,4].sample
+  category = categories.sample
   ids = User.pluck(:id)
-  machine = Machine.create!(name: name, location: location, user_id: ids.sample)
+  force_moteur = rand(50..400)
+  price= rand(20..200)
+  machine = Machine.create!(make: make, location: location, user_id: ids.sample, year:year, category:category, force_moteur:force_moteur, price_per_hour:price)
 end
 
 puts 'finished creating the machines'

@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2018_08_21_145109) do
   end
 
   create_table "machines", force: :cascade do |t|
-    t.string "name"
+    t.string "make"
     t.string "location"
     t.bigint "user_id"
     t.datetime "created_at", null: false
