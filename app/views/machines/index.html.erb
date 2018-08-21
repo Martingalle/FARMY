@@ -1,4 +1,4 @@
-<div class="banner" style="background-image: linear-gradient(-120deg, rgba(63, 232, 171, 0.2), rgba(144, 124, 255, 0.2)), url('/assets/banner-tractor.png');;">
+<div class="banner" style="background-image: linear-gradient(-120deg, rgba(63, 232, 171, 0.2), rgba(144, 124, 255, 0.2)), url('<%= image_path 'banner-tractor.png' %>');">
   <div class="title">
     <h1>Find the <p></p><mark id="type"></mark> <br>you need</h1>
     <p>In the right place, at the right price</p>
@@ -62,7 +62,7 @@
 </div>
 <div class="container home">
   <row>
-    <h2 class="text-center"><mark>Our last equipments</mark></h2>
+    <h2 class="text-center"><mark>Our lastest equipments</mark></h2>
       <% @machines.first(6).each do |machine| %>
         <div class="col-xs-12 col-sm-6 col-md-4">
           <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('');">

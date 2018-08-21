@@ -33,7 +33,7 @@ p {
   bottom: 135%;
   left: 60%;
   z-index: 0;
-  background: url(/assets/background.svg) 0 0 repeat;
+  background: asset-data-url("background.svg") 0 0 repeat;
   -webkit-transform: rotate(-30deg);
   -moz-transform: rotate(-30deg);
   -ms-transform: rotate(-30deg);
