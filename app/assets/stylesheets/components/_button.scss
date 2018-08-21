@@ -1,0 +1,9 @@
+.btn-primary {
+  background: $purple;
+  border: none;
+  &:hover {
+    color: $purple;
+    background-color: white;
+    border: solid $purple;
+  }
+}
