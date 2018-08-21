@@ -1,0 +1,61 @@
+.banner {
+  position: relative;
+  background-size: cover;
+  height: calc(100vh - 70px);
+  .title {
+    position: absolute;
+    min-width: 530px;
+    max-width: 530px;
+    padding-top: 40px;
+    position: absolute;
+    top: 50px;
+    right: 100px;
+    color: white;
+  }
+  h1 {
+    font-size: 72px;
+    font-weight: 600;
+  }
+  p {
+    font-weight: 500;
+    font-size: 20px;
+  }
+}
+
+#search-home {
+  background: white;
+  padding: 0 20px 0 20px;
+  border-bottom: 4px solid $green;
+  max-width: 80%;
+  input#search {
+    font-size: 18px;
+    width: 85%;
+  }
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+mark {
+  color: white;
+  background: transparent;
+  position: relative;
+  padding: 0;
+  z-index: 0;
+  &:before {
+    height: 34px;
+    left: 0px;
+    right: 0px;
+    background-color: $green;
+    content: " ";
+    position: absolute;
+    z-index: -2;
+    bottom: 0;
+  }
+}
+
+h2 {
+  padding: 40px 0 60px 0;
+  font-weight: 600;
+}
