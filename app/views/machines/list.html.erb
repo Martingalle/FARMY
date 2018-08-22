@@ -1,6 +1,78 @@
-<h1>Hello</h1>
+<div class="container-fluid text-center">
+<h1>My dashboard</h1>
+<p>See your bookings as a user and owner</p>
 
 <ul>
   <li><%= @current_user %></li>
-  <li><%= @current_user_id %></li>
+  <li><%= @current_user_id %>
+  </li>
 </ul>
+
+ <img src="app/assets/images/u.jpg" alt="">
+
+</div>
+
+<div class="container">
+  <div id="dashboard">
+    <div id="main">
+      <div class="profile-image avatar" style="background-image: url('<%= image_path('user.jpg')%>');">
+      </div>
+      <p>My Farmy Dashboard</p>
+      <p>Member since 22/11/2018</p>
+      <p><%= @current_user.email %></p>
+    </div>
+    <div class="earnings">
+    <h4>My earnings of the month</h4>
+
+    <div class="user-machines">
+      <h4>My Machines</h4>
+    </div>
+
+    <h4>Earnings so far</h4>
+    </div>
+  </div>
+</div>
+
+<hr>
+<p>My Messages</p>
+
+<div class="message my-messages">
+        <img class="avatar" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
+        <div class="message-name">
+          <h3>Gab Dehan</h3>
+          <p>10/07/17</p>
+        </div>
+        <div class="message-body">
+          <p><strong>I am not sure yet!</strong></p>
+          <p>
+            I am not sure yet! I might be in Shanghai at this moment... Can I tell you later?
+          </p>
+        </div>
+        <div class="message-status">
+          <p class="status pending">Pending</p>
+          <p class="price">€345</p>
+        </div>
+    </div>
+
+    <div class="message my-messages">
+
+        <img class="avatar" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
+        <div class="message-name">
+          <h3>Gab Dehan</h3>
+          <p>10/07/17</p>
+        </div>
+        <div class="message-body">
+          <p><strong>I am not sure yet!</strong></p>
+          <p>
+            I am not sure yet! I might be in Shanghai at this moment... Can I tell you later?
+          </p>
+        </div>
+        <div class="message-status">
+          <p class="status pending">Pending</p>
+          <p class="price">€345</p>
+        </div>
+    </div>
+
+<div class="referral text-center">
+  <h2>Refer a friend and enter our sweepstakes to win a brand new John Deere</h2>
+</div>
