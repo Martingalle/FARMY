@@ -1,6 +1,69 @@
-<h1>Hello</h1>
+<div class="container-fluid text-center">
+<h1>My dashboard</h1>
+<p><strong>See</strong> and <strong>manage</strong> your bookings as a user and owner</p>
 
 <ul>
   <li><%= @current_user %></li>
-  <li><%= @current_user_id %></li>
+  <li><%= @current_user_id %>
+  </li>
 </ul>
+
+
+</div>
+
+<div class="container dashboard">                
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="home" aria-selected="true">Profile</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="profile" aria-selected="false">Messages</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="contact-tab" data-toggle="tab" href="#my-machines" role="tab" aria-controls="contact" aria-selected="false">My machines</a>
+    </li>
+  </ul>
+
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <div class="profile-image avatar" style="background-image: url('<%= image_path('user.jpg')%>');">
+          </div>
+          <span id="name"><strong><%= @current_user.name%></strong></span>
+          <p>My Farmy Dashboard</p>
+          <p>Member since 22/11/2018</p>
+          <p><%= @current_user.email %></p>
+          <div class="earnings">
+            <h4>My earnings of the month:</h4>
+          </div>
+        </div>
+      <div class="tab-pane fade" id="messages" role="tabpanel" aria-labelledby="messages-tab">
+        <div class="message">
+          <img class="profile-image avatar" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
+          <div class="message-name">
+            <h3>Gab Dehan</h3>
+            <p>10/07/17</p>
+          </div>
+          <div class="message-body">
+            <p><strong>I am not sure yet!</strong></p>
+            <p>
+              I am not sure yet! I might be in Shanghai at this moment... Can I tell you later?
+            </p>
+          </div>
+          <div class="message-status">
+            <p class="status pending">Pending</p>
+            <p class="price">€345</p>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="messages" role="tabpanel" aria-labelledby="my-machines-tab">
+        <ul>
+          <li>Manage this machine</li>
+        </ul>
+      </div>
+    </div>
+  </div>  
+</div>
+
+  <div class="referral text-center">
+    <h2>Refer a friend and enter our sweepstakes to win a brand new John Deere</h2>
+  </div>
