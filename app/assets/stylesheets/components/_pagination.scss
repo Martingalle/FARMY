@@ -1,0 +1,10 @@
+.pagination > li > a, .pagination > li > span {
+  margin-top: 2em;
+  color: $green;
+  border: 0;
+  font-size: 24px;
+}
+.page-link.active {
+  border: 1px solid;
+  margin-right: 5px;
+}

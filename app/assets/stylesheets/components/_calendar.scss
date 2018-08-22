@@ -1,0 +1,135 @@
+@-webkit-keyframes bounce{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.4);}
+  100%{transform:scale(1);}
+}
+
+@-webkit-keyframes bounce2{
+  0%{transform:scale(1);}
+  50%{transform:scale(0.6);}
+  100%{transform:scale(1);}
+}
+
+@keyframes bounce{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.4);}
+  100%{transform:scale(1);}
+}
+
+@keyframes bounce2{
+  0%{transform:scale(1);}
+  50%{transform:scale(0.6);}
+  100%{transform:scale(1);}
+}
+
+
+
+
+#icon_calendar
+{
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: 50%;
+  top: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+  border-radius: 18px;
+  background-color: rgb(240,240,240);
+  box-shadow: 0px 0px 8px rgb(60,60,60);
+  cursor: pointer;
+  color: #F05252;
+  overflow: hidden;
+  transition:all 0.2s;
+}
+
+#icon_calendar:hover
+{
+  transform:scale(1.1);
+}
+
+
+
+#days_wrap
+{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 40px;
+  height: 110px;
+  color: #3C3C3C;
+  font-size: 35px;
+  z-index: 3;
+  transition:all 0.2s;
+}
+
+
+.days
+{
+  position: relative;
+  float: left;
+  width: calc(100%/7);
+  height: calc(100%/5);
+  font-size: 12px;
+  text-align: center;
+  transition:all 0.2s;
+  display: none;
+  line-height: 22px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+
+
+.fleches_mois
+{
+  position: absolute;
+  cursor: pointer;
+  top: 11px;
+  z-index: 1;
+  display: none;
+  opacity: 1;
+}
+
+
+#fleche_mois1
+{
+  left: 5px;
+}
+
+#fleche_mois2
+{
+  right: 5px;
+}
+
+
+
+
+#month_wrap
+{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 00px;
+  height: 40px;
+  line-height: 40px;
+  transition:all 0.1s;
+  color: #F05252;
+}
+
+
+.mois
+{
+  position: absolute;
+  margin-left: 230px;
+  width: 80px;
+  height: 100%;
+  top: 0px;
+  line-height: 40px;
+  font-size: 14px;
+  text-align: left;
+  font-family: 'openbold',sans-serif;
+  transition:all 0.2s;
+  opacity: 0.15;
+  display: none;
+}
