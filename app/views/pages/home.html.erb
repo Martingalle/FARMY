@@ -40,7 +40,7 @@
         </div><!-- /.info-box-image -->
         <div class="textbox">
           <h4>INSURANCE INCLUDED FOR RENTAL</h4>
-          <p>All the equipment is insured in ALL RISKS, without additional step.</p>
+          <p>All the equipment is <br>insured in ALL RISKS, <br>without additional step.</p>
         </div>
       </div>
       <!-- Fourth row -->
@@ -61,24 +61,22 @@
   <h2>To prefer <strong>leasing</strong> to debt is <br>to <strong>preserve</strong> your cash flow.</h2>
 </div>
 <div class="container home">
-  <row>
-    <h2 class="text-center"><mark>Our lastest equipments</mark></h2>
-    <% @machines.first(6).each do |machine| %>
-      <div class="col-xs-12 col-sm-6 col-md-6">
-        <%= link_to machine_path(machine) do %>
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= machine.photo %>');">
-          <div class="card-category"><%= machine.category %></div>
-          <div class="card-description">
-            <h2><%= machine.make %></h2>
-            <p><%= machine.location %></p>
-          </div>
-          <img class="card-user" src="https://avatars2.githubusercontent.com/u/39128210?s=460&v=4">
+  <h2 class="text-center"><mark>Our lastest equipments</mark></h2>
+  <% @machines.first(6).each do |machine| %>
+    <div class="col-xs-12 col-sm-6 col-md-6">
+      <%= link_to machine_path(machine) do %>
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= machine.photo %>');">
+        <div class="card-category"><%= machine.category %></div>
+        <div class="card-description">
+          <h2><%= machine.make %></h2>
+          <p><%= machine.location %></p>
         </div>
-        <% end %>
+        <img class="card-user" src="https://avatars2.githubusercontent.com/u/39128210?s=460&v=4">
       </div>
-    <% end %>
-    <div class="home-btn text-center">
-      <%= link_to 'See more', machines_path, class: "btn btn-primary btn-product"  %>
+      <% end %>
     </div>
-  </row>
+  <% end %>
+  <div class="home-btn text-center">
+    <%= link_to 'See more', machines_path, class: "btn btn-primary btn-product"  %>
+  </div>
 </div>
