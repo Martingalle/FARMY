@@ -1,7 +1,4 @@
-h1{
-  color: blue;
 
-}
 
 #dashboard{
   display:grid;
@@ -27,11 +24,11 @@ h1{
 }
 
 .referral{
-  border:2px solid green;
   background-image: asset-url('u.jpg');
   height:400px;
   background-position: center;
   background-size: cover;
+  background-position: fixed;
   color:white;
   display:flex;
   align-items:center;

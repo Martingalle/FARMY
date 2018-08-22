@@ -45,7 +45,6 @@ class MachinesController < ApplicationController
   def list
     @current_user = current_user
     @current_user_id = current_user.id
-
   end
 
   private
