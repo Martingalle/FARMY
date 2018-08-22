@@ -2,7 +2,7 @@ class MachinesController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
 
   def index
-    @machines = Machine.where.not(latitude: nil, longitude: nil)
+    @machines = Machine.where(latitude: nil, longitude: nil)
 
     @markers = @machines.map do |machine|
       {

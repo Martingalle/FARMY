@@ -26,7 +26,7 @@ cities = ["Nevers", "Bourgoin-Jallieu", "Dinard", "Auxerre", "Nantua", "Cassis",
   make = makes.sample
   location = cities.sample
   year = rand(1990..2018)
-  category = ["Tractor","Combine Harvester","Sower","Sprayer","Shredder","Spreader","Rolls","Sidewinder","Vineyard tractor"].sample    
+  category = ["Tractor","Combine Harvester","Sower","Sprayer","Shredder","Spreader","Rolls","Sidewinder","Vineyard Tractor"].sample
   roues_motrices = [2,4].sample
   case category
     when "Tractor"
@@ -38,7 +38,7 @@ cities = ["Nevers", "Bourgoin-Jallieu", "Dinard", "Auxerre", "Nantua", "Cassis",
     when "Sprayer"
       photo = "v1534854627/nve3asouppu4vldf62tn"
     when "Shredder"
-      photo = "huarkiih1lilpn7xiabv"
+      photo = "v1534854296/huarkiih1lilpn7xiabv"
     when "Spreader"
       photo = "v1534854727/qzqnyzle6pqot12f55eq"
     when "Rolls"
@@ -47,11 +47,13 @@ cities = ["Nevers", "Bourgoin-Jallieu", "Dinard", "Auxerre", "Nantua", "Cassis",
       photo = "v1534854279/glmjyatp0zzd5qbkq2hv"
     when "Vineyard Tractor"
       photo = "v1534853673/nhcvwhnu7kmwhnv6czns"
-    end
+  end
   ids = User.pluck(:id)
   force_moteur = rand(50..400)
-  price= rand(20..200)
-  machine = Machine.create!(make: make, location: location, user_id: ids.sample, year:year, category:category, force_moteur:force_moteur, price_per_hour:price, remote_photo_url: "https://res.cloudinary.com/ehrsatz/image/upload/#{photo}.jpg")
+  price = rand(20..200)
+  machine = Machine.create!(make: make, location: location, user_id: ids.sample, year:year, category: category, force_moteur:force_moteur, price_per_hour:price, remote_photo_url: "https://res.cloudinary.com/ehrsatz/image/upload/#{photo}.jpg")
 end
+
+puts 'finished creating the machines'
 
 puts 'finished creating the machines'
