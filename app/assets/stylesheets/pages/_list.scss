@@ -1,12 +1,8 @@
 
 
-#dashboard{
-  display:grid;
-  height:70vh;
-  padding:10px;
-  border: 1px solid red;
-  grid-template-rows: 200px 1fr 1fr 1fr;
-  grid-template-columns: 300px repeat(3,1fr);  
+
+#name {
+  font-size:2em;
 }
 
 #main{
@@ -50,6 +46,16 @@
   grid-column: 1 / span 4
 
 }
+
+.nav li a{
+ color:#766F75;
+}
+
+.nav > li.active {
+  color: red;
+}
+
+
 
 .message {
   display: flex;
