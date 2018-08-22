@@ -46,6 +46,7 @@ class MachinesController < ApplicationController
   def list
     @current_user = current_user
     @current_user_id = current_user.id
+    @machine = Machine.where(user_id: @current_user_id)
   end
 
   private
