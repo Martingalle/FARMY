@@ -1,0 +1,23 @@
+.header_create {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  height: calc(100vh - 70px);
+  position: sticky;
+  top: 70px;
+  h1 {
+    color: white;
+    font-weight: 600;
+  }
+}
+.form-container {
+  display: flex;
+}
+.form-center {
+  display: flex;
+  justify-content: center;
+}
+.padding-form {
+  padding: 60px 70px;
+}

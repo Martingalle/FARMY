@@ -6,7 +6,17 @@
         <div class="img">
           <%= image_tag 'noa.jpg' %>
         </div>
-        <div class="height" style="height: 1200px; background-color: gray;"></div>
+        <div id="#description">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam explicabo magni nam tenetur sapiente similique voluptatem nobis nisi laboriosam. Perferendis vero, totam doloremque omnis ut blanditiis mollitia obcaecati ab esse.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam nam, quidem alias iusto pariatur eius inventore, quae ipsa, placeat labore optio sit incidunt magni quod, fugit quas. Aliquam, similique saepe?</p>
+        </div>
+        <div
+            id="map"
+            style="width: 100%;
+            height: 600px;"
+            data-markers="<%= @markers.to_json %>"
+          ></div>
+        </div>
       </div>
       <div class="col-xs-12 col-md-4">
         <div class="tophead">
