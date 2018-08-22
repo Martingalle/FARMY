@@ -4,6 +4,17 @@
   cursor: pointer;
   font-weight: 400;
   padding: 20px;
-  max-width: 200px;
+  width: 150px;
   height: 130px;
+  margin: 20px;
+  float: left;
+}
+.form-control-label {
+  font-size: 25px;
+}
+.col-form-label {
+  font-size: 25px;
+  font-weight: 600;
+  border: 0;
+  margin-bottom: 0;
 }
