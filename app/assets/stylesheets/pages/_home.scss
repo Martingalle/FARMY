@@ -2,6 +2,7 @@
 body {
   background-color: $white;
 }
+
 .info-box-image {
   img {
     margin: 20px;
@@ -14,16 +15,17 @@ h4 {
 p {
   margin: 10px;
   }
-  #catchline{
-    font-size: 40px;
-    font-weight:200;
-    -webkit-text-stroke: 1px rgba(0,0,0,0.2);
-    text-shadow:
-    -1px -1px 0 rgba(0,0,0,0.2),
-    1px -1px 0  rgba(0,0,0,0.2),
-    -1px 1px 0  rgba(0,0,0,0.2),
-    1px 1px 0  rgba(0,0,0,0.2);
+#catchline{
+  font-size: 40px;
+  font-weight:200;
+  -webkit-text-stroke: 1px rgba(0,0,0,0.2);
+  text-shadow:
+  -1px -1px 0 rgba(0,0,0,0.2),
+  1px -1px 0  rgba(0,0,0,0.2),
+  -1px 1px 0  rgba(0,0,0,0.2),
+  1px 1px 0  rgba(0,0,0,0.2);
   }
+
 .why {
   padding-bottom: 60px;
 }
