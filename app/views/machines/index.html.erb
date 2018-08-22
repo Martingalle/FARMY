@@ -28,7 +28,7 @@
       <% @machines.each do |machine| %>
         <div class="col-xs-12 col-sm-6 col-md-6">
           <%= link_to machine_path(machine) do %>
-          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= machine.photo %>');">
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path machine.photo, width: 600, crop: 'scale' %>');">
             <div class="card-category"><%= machine.category %></div>
             <div class="card-description">
               <h2><%= machine.make %></h2>

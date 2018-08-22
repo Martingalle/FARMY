@@ -4,11 +4,12 @@
     <div class="product">
       <div class="col-xs-12 col-md-8" style="margin-bottom: 50px;">
         <div class="img">
-          <%= image_tag 'noa.jpg' %>
+          <%= cl_image_tag @machine.photo, width: 600, crop: 'scale' %>
         </div>
         <div id="desc" style="padding-top:30px"></div>
         <div id="description">
           <h2>Make: <%= @machine.make %></h2>
+          <h2>Category: <%= @machine.category %></h2>
           <h2>Description</h2>
           <p style="margin:0px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam explicabo magni nam tenetur sapiente similique voluptatem nobis nisi laboriosam. Perferendis vero, totam doloremque omnis ut blanditiis mollitia obcaecati ab esse.</p>
           <p style="margin:0px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam nam, quidem alias iusto pariatur eius inventore, quae ipsa, placeat labore optio sit incidunt magni quod, fugit quas. Aliquam, similique saepe?</p>
@@ -25,7 +26,7 @@
       </div>
       <div class="col-xs-12 col-md-4">
         <div class="tophead" style="margin-bottom: 154px;">
-          <div class="price">60 € /jour</div>
+          <div class="price">$<%= @machine.price_per_hour %>/hour</div>
           <div class="days">3 jours minimum</div>
         </div>
         <!-- test calendar -->
