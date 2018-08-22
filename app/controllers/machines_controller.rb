@@ -1,5 +1,5 @@
 class MachinesController < ApplicationController
-  skip_before_action :authenticate_user!, only: :index
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     @machines = Machine.where(latitude: nil, longitude: nil)
@@ -14,6 +14,7 @@ class MachinesController < ApplicationController
   end
 
   def show
+    @machine = Machine.find(params[:id])
   end
 
   def new
