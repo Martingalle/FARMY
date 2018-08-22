@@ -6,3 +6,6 @@ loadDynamicBannerText();
 
 import { stickyNavigation } from '../components/sticky';
 stickyNavigation();
+
+import { autocomplete } from '../components/autocomplete';
+autocomplete();

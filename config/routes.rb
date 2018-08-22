@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: "machines#index"
+  # root to: "machines#index"
   resources :machines do
     resources :bookings, only: [:new, :create]
   end
@@ -8,8 +8,8 @@ Rails.application.routes.draw do
 
   # Routes / Controller for user dashboard
   get '/my-machines', to: "machines#list"
-  
+
   # Route to home
-  root to: "machines#index"
+  root to: "pages#home"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

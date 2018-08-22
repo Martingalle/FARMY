@@ -3,10 +3,12 @@
 
 @font-face {
   font-family: "sofia";
-  src: url(/assets/Fonts/SofiaPro.otf) format("truetype");
+  src: url(font-path('SofiaPro.otf')) format('truetype'),
+}
 
+@font-face {
   font-family: "sofialight";
-  src: url(/assets/Fonts/sofiapro-light.otf) format("truetype");
+  src: url(font-path('sofiapro-light.otf')) format('truetype'),
 }
 
 // Define fonts for body and headers
