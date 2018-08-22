@@ -1,14 +1,16 @@
 <div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-      <h1>Machines#new</h1>
-      <%= simple_form_for @machine do |f| %>
-        <%= f.error_notification %>
-        <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-        <%= f.input :make %>
-        <%= f.input :location %>
-        <%= f.button :submit %>
-      <% end %>
-    </div>
-  </div>
+  <div class="row text-center col-xs-12 col-sm-9 col-sm-offset-2">
+    <%= simple_form_for(@machine) do |f|%>
+      <%= f.error_notification %>
+      <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+      <%= f.input :make, collection:["Massey-Ferguson", "New Holland", "International", "Bobard", "McCormick", "Kobatsu", "Manitou", "John Deere", "Deutz-Fahr", "Someca"] %>
+      <%= f.input :category, collection: ["Tractor","Combine Harvester","Sower","Sprayer","Shredder","Spreader","Rolls","Sidewinder","Vineyard tractor"]%>
+      <%= f.input :year, collection: 1991..2018, hint: "We don't allow machines older than 1990"%>
+      <%= f.input :location, placeholder: 'Saint-Etienne, France' %>
+      <%= f.input :force_moteur, label:'Engine power -bhp-' %>
+      <%= f.input :roues_motrices, collection: [2,4,6] %>
+      <%= f.input :price_per_hour, label: 'Price per hour (€)' %>
+      <%= f.submit%>
+    <% end %>
+  </div>  
 </div>

@@ -18,10 +18,20 @@ class MachinesController < ApplicationController
 
   def new
     @machine = Machine.new
-    @user = current_user
   end
 
   def create
+    @user_id = current_user.id
+    @machine = Machine.new(machine_params)
+    @machine.user_id = @user_id
+    @machine_params = machine_params
+    # before_save
+    if @machine.save 
+      raise
+      redirect_to my_machines_path
+    else
+      render 'new'
+    end
   end
 
   def edit
@@ -37,6 +47,12 @@ class MachinesController < ApplicationController
     @current_user = current_user
     @current_user_id = current_user.id
     # @myMachines = Machine.where({|machine| machine.user_id == current_user})
+  end
+
+  private
+
+  def machine_params
+    params.require(:machine).permit(:make, :category, :photo, :force_moteur, :roues_motrices, :price_per_hour, :location, :year)
   end
 
 end
