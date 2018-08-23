@@ -9,4 +9,18 @@ class Machine < ApplicationRecord
   validates :price_per_hour, presence:true, numericality: true
   belongs_to :user
   mount_uploader :photo, PhotoUploader
+
+  include PgSearch
+    pg_search_scope :search_by,
+      against: [ :make, :location, :category ],
+      using: {
+        tsearch: {
+          prefix: true,
+          negation: true,
+          highlight: {
+                  start_sel: '<b>',
+                  stop_sel: '</b>',
+                }
+        } # <-- now `superman batm` will return something!
+      }
 end

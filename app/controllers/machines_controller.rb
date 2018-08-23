@@ -2,7 +2,14 @@ class MachinesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @machines = Machine.where(latitude: nil, longitude: nil)
+    # raise
+    if params[:search].present?
+      @machines = Machine.search_by(params[:search]).with_pg_search_highlight
+    else
+      @machines = Machine.all
+    end
+
+    # @machines = Machine.where(latitude: nil, longitude: nil)
 
     @markers = @machines.map do |machine|
       {
