@@ -87,12 +87,22 @@
   padding-top: 40px;
   justify-content: space-evenly;
 }
-.price {
+.price-show {
   &:after {
     content: '/hour';
     font-size: 10px;
     position: absolute;
     top: 18px;
+  }
+}
+.hours {
+  &:after {
+    content: '/hours min';
+    font-size: 10px;
+    position: absolute;
+    top: 18px;
+    right: 10px;
+    margin-right: 28px;
   }
 }
 .form-control-label {

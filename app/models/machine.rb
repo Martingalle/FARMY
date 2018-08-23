@@ -28,6 +28,6 @@ class Machine < ApplicationRecord
   include AlgoliaSearch
 
   algoliasearch per_environment: true do
-    attribute :location, :category, :make, :photo
+    attribute :location, :category, :make, :photo, :id, :price_per_hour
   end
 end
