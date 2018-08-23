@@ -5,9 +5,10 @@
   <% end %>
   <%= form_tag(machines_path, :method => "get", id: "search-form") do %>
     <%= image_tag "search.svg", height: 22 %>
-    <%= text_field_tag :search, params[:search] %>
+    <%= text_field_tag :search, params[:search], placeholder: "Tractor Lyon"  %>
   <% end %>
 
+  <input type="text" id="search">
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm pullDown">
