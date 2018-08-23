@@ -9,3 +9,6 @@ stickyNavigation();
 
 import { autocomplete } from '../components/autocomplete';
 autocomplete();
+
+import { datepickr } from '../components/flatpickr';
+datepickr();

@@ -4,7 +4,7 @@
 }
 .tophead {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   background-color: $gray;
   color: white;
   padding: 15px;
@@ -28,7 +28,7 @@
 }
 .left-nav {
   display: flex;
-  padding-left: 12px;
+  padding-left: 3px;
 }
 .subnav {
   display: flex;
@@ -45,7 +45,8 @@
   -o-transition: .3s;
   -webkit-transition: .3s;
   transition: .3s;
-  margin-top: 40px;
+  margin-top: 30px;
+  width: 313px;
 }
 .btn-primary:hover {
     color: #907cff;
@@ -54,4 +55,35 @@
 }
 .left-column {
   margin-bottom: 2em;
+}
+.insurance {
+  border: 1px solid #f2f2f2;
+  margin-top: 60px;
+  padding: 10px;
+  i {
+    color: $purple;
+    font-size: 60px;
+  }
+  hr {
+    border-top: 1px solid #f2f2f2;
+    width: 80%;
+  }
+}
+.first_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  .logo {
+    margin-left: 10px;
+  }
+}
+.insurance_text {
+  width: 70%;
+  font-size: 16px;
+}
+.spec {
+  display: flex;
+  padding-top: 40px;
+  justify-content: space-evenly;
 }

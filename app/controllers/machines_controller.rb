@@ -22,6 +22,7 @@ class MachinesController < ApplicationController
 
   def show
     @machine = Machine.find(params[:id])
+    @booking = Booking.new
   end
 
   def new
