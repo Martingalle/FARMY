@@ -1,7 +1,23 @@
 .btn-primary {
-  background: $purple;
+  background-color: $purple;
   border: none;
+  outline: none!important;
   &:hover {
+    color: $purple;
+    background-color: white;
+    border: solid $purple;
+  }
+  &:active {
+    color: $purple;
+    background-color: white;
+    border: solid $purple;
+  }
+  &:focus {
+    color: $purple;
+    background-color: white;
+    border: solid $purple;
+  }
+  &:focus-within {
     color: $purple;
     background-color: white;
     border: solid $purple;
@@ -56,4 +72,19 @@
 }
 .filter-menu {
   margin-top: 38px;
+}
+.btn-product:focus {
+  color: $white;
+  background-color: $purple!important;
+  border-color: $purple!important;
+}
+.btn-product:focus-within {
+  color: $white;
+  background-color: $purple!important;
+  border-color: $purple!important;
+}
+.btn-product:active {
+  color: $white;
+  background-color: $purple!important;
+  border-color: $purple!important;
 }
