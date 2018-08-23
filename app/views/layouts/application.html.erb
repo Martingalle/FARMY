@@ -31,14 +31,24 @@
     <%= render 'shared/footer' %>
     <script type="text/html" id="hit-template">
       <div id="container-search" class="col-xs-12 col-sm-6 col-md-6">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('{{photo.url}}');">
-          <div class="card-category">{{category}}</div>
-          <div class="card-description">
-            <h2>{{make}}</h2>
-            <p>{{location}}</p>
+        <a href="/machines/{{id}}">
+        <div class="full-card">
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('{{photo.url}}');"></div>
+          <div class="card-infos">
+            <div class="card-category">
+              <div class="machine-type" style="display: block;">
+                <h2 style="font-size: 20px;margin-bottom: 0;"><card>{{category}}</card></h2>{{make}}
+              </div>
+              <div class="price" style="margin-right: 10px;">
+                {{price_per_hour}}
+              </div>
+            </div>
+            <div class="card-description">
+              <p>{{location}}</p>
+            </div>
           </div>
-          <img class="card-user" src="https://avatars2.githubusercontent.com/u/39128210?s=460&v=4">
         </div>
+        </a>
       </div>
     </script>
     <%= javascript_include_tag 'application' %>
