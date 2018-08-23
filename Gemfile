@@ -25,6 +25,7 @@ gem 'hirb', '~> 0.7.3'
 
 # Search
 gem 'pg_search'
+gem "algoliasearch-rails"
 
 group :development do
   gem 'web-console', '>= 3.3.0'

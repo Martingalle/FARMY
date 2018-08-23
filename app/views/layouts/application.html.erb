@@ -1,4 +1,17 @@
 <!DOCTYPE html>
+<!--
+       ___         ___           ___           ___
+      /  /\       /  /\         /  /\         /__/\          ___
+     /  /:/_     /  /::\       /  /::\       |  |::\        /__/|  we're hiring!
+    /  /:/ /\   /  /:/\:\     /  /:/\:\      |  |:|:\      |  |:|  https://farmydable.herokuapp.com/jobs
+   /  /:/ /:/  /  /:/~/::\   /  /:/~/:/    __|__|:|\:\     |  |:|
+  /__/:/ /:/  /__/:/ /:/\:\ /__/:/ /:/___ /__/::::| \:\  __|__|:|  Designed and coded at Le Wagon <3
+  \  \:\/:/   \  \:\/:/__\/ \  \:\/:::::/ \  \:\~~\__\/ /__/::::\
+   \  \::/     \  \::/       \  \::/~~~~   \  \:\          ~\~~\:\
+    \  \:\      \  \:\        \  \:\        \  \:\           \  \:\
+     \  \:\      \  \:\        \  \:\        \  \:\           \__\/
+      \__\/       \__\/         \__\/         \__\/
+-->
 <html>
   <head>
     <meta charset="UTF-8">
@@ -9,11 +22,25 @@
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= stylesheet_pack_tag 'application' %>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.1/dist/instantsearch.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.1/dist/instantsearch-theme-algolia.min.css">
   </head>
   <body>
     <%= render 'shared/navbar' %>
     <%= yield %>
     <%= render 'shared/footer' %>
+    <script type="text/html" id="hit-template">
+      <div id="container-search" class="col-xs-12 col-sm-6 col-md-6">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('{{photo.url}}');">
+          <div class="card-category">{{category}}</div>
+          <div class="card-description">
+            <h2>{{make}}</h2>
+            <p>{{location}}</p>
+          </div>
+          <img class="card-user" src="https://avatars2.githubusercontent.com/u/39128210?s=460&v=4">
+        </div>
+      </div>
+    </script>
     <%= javascript_include_tag 'application' %>
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV["GOOGLE_API_FRONT"]}&libraries=places" %>
     <%= javascript_pack_tag 'application' %>
