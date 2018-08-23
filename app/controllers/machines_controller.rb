@@ -28,7 +28,7 @@ class MachinesController < ApplicationController
     @machine_params = machine_params
     # before_save
     if @machine.save
-      redirect_to my_machines_path
+      redirect_to machine_path(@machine)
     else
       render 'new'
     end
