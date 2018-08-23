@@ -19,5 +19,22 @@
   justify-content: center;
 }
 .padding-form {
-  padding: 60px 70px;
+  padding: 60px 67px;
+}
+.simple_form {
+  .btn-product {
+    padding: 10px!important;
+  }
+  label {
+    font-size: 25px;
+  }
+}
+.form-check {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  label {
+    font-size: 12px;
+  }
 }
