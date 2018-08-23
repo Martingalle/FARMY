@@ -25,20 +25,12 @@
           </div>
         </div>
       </div>
-      <% @machines.each do |machine| %>
-        <div class="col-xs-12 col-sm-6 col-md-6">
-          <%= link_to machine_path(machine) do %>
-          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path machine.photo, width: 600, crop: 'scale' %>');">
-            <div class="card-category"><%= machine.category %></div>
-            <div class="card-description">
-              <h2><%= machine.make %></h2>
-              <p><%= machine.location %></p>
-            </div>
-            <img class="card-user" src="https://avatars2.githubusercontent.com/u/39128210?s=460&v=4">
-          </div>
-          <% end %>
-        </div>
-      <% end %>
+      <div id="search-box">
+        <!-- SearchBox widget will appear here -->
+      </div>
+      <div id="hits">
+        <!-- Hits widget will appear here -->
+      </div>
       <nav aria-label="Page navigation example" style="text-align: center;">
         <ul class="pagination">
           <li class="page-item">
@@ -73,3 +65,15 @@
   </div>
 </div>
 
+<script type="text/html" id="hit-template">
+  <div id="container-search" class="col-xs-12 col-sm-6 col-md-6">
+    <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('{{photo.url}}');">
+      <div class="card-category">{{category}}</div>
+      <div class="card-description">
+        <h2>{{make}}</h2>
+        <p>{{location}}</p>
+      </div>
+      <img class="card-user" src="https://avatars2.githubusercontent.com/u/39128210?s=460&v=4">
+    </div>
+  </div>
+</script>

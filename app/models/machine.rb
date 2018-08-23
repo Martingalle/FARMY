@@ -10,17 +10,23 @@ class Machine < ApplicationRecord
   belongs_to :user
   mount_uploader :photo, PhotoUploader
 
-  include PgSearch
-    pg_search_scope :search_by,
-      against: [ :make, :location, :category ],
-      using: {
-        tsearch: {
-          prefix: true,
-          negation: true,
-          highlight: {
-                  start_sel: '<b>',
-                  stop_sel: '</b>',
-                }
-        } # <-- now `superman batm` will return something!
-      }
+  # include PgSearch
+  #   pg_search_scope :search_by,
+  #     against: [ :make, :location, :category ],
+  #     using: {
+  #       tsearch: {
+  #         prefix: true,
+  #         negation: true,
+  #         highlight: {
+  #                 start_sel: '<b>',
+  #                 stop_sel: '</b>',
+  #               }
+  #       } # <-- now `superman batm` will return something!
+  #     }
+
+  include AlgoliaSearch
+
+  algoliasearch per_environment: true do
+    attribute :location, :category, :make, :photo
+  end
 end
