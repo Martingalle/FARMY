@@ -3,6 +3,7 @@ import instantsearch from "instantsearch.js";
 import { connectSearchBox } from "instantsearch.js/es/connectors";
 import { searchBox } from "instantsearch.js/es/widgets";
 import { hits } from "instantsearch.js/es/widgets";
+import { menuSelect } from "instantsearch.js/es/widgets";
 
 function algolia() {
   const run = document.getElementById('btn-filter');
@@ -35,6 +36,17 @@ function algolia() {
         templates: {
           item: document.getElementById('hit-template').innerHTML,
           empty: "We didn't find any results for the search <em>\"{{query}}\"</em>"
+        }
+      })
+    );
+
+    search.addWidget(
+      menuSelect({
+        container: '#make-filter',
+        attributeName: 'location',
+        limit: 10,
+        templates: {
+          header: 'Make'
         }
       })
     );

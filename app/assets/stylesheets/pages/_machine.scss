@@ -96,12 +96,12 @@
   }
 }
 .hours {
+  margin-right: 35px;
   &:after {
     content: '/hours min';
     font-size: 10px;
     position: absolute;
     top: 18px;
-    right: 10px;
     margin-right: 28px;
   }
 }
@@ -127,4 +127,8 @@ input#search.ais-search-box--input {
 .ais-hits.ais-hits__empty {
   padding: 54px;
   text-align: center;
+}
+.machine-infos {
+  display: flex;
+  padding-top: 18px;
 }

@@ -7,29 +7,47 @@
           <%= cl_image_tag @machine.photo, width: 600, crop: 'scale' %>
         </div>
         <div class="spec">
-          <div class="make">
-            <p>Make:</p>
-            <p><%= @machine.make %></p>
+          <div class="user">
+            <%= cl_image_tag @machine.user.photo, width: 100, radius:"max", crop:"thumb" %>
           </div>
-          <div class="category">
-            <p>Category:</p>
-            <p><%= @machine.category %></p>
-          </div>
-          <div class="category">
-            <p>Engine power:</p>
-            <p><%= @machine.force_moteur %></p>
-          </div>
-          <div class="category">
-            <p>Driven wheels:</p>
-            <p><%= @machine.roues_motrices %></p>
+          <div class="infos">
+            <div class="user-infos">
+            <!-- If my machine -->
+            <% if !current_user.nil? && (@machine.user_id == current_user.id) %>
+              <h4>My <%= @machine.category %></h4>
+            <!-- If not my machine -->
+            <% else %>
+              <h4><%= @machine.user.name %>'s <%= @machine.category %></h4>
+            <!-- If not my machine -->
+            <% end %>
+            </div>
+            <div class="machine-infos">
+                <div class="make">
+                  <p>Make:</p>
+                  <p><%= @machine.make %></p>
+                </div>
+                <div class="category">
+                  <p>Category:</p>
+                  <p><%= @machine.category %></p>
+                </div>
+                <div class="category">
+                  <p>Engine power:</p>
+                  <p><%= @machine.force_moteur %></p>
+                </div>
+                <div class="category">
+                  <p>Driven wheels:</p>
+                  <p><%= @machine.roues_motrices %></p>
+                </div>
+            </div>
           </div>
         </div>
+        <hr>
         <div id="desc" style="padding-top:30px">
-          <h2>Description</h2>
+          <h2><card>Description</card></h2>
           <p style="margin:0px"><%= @machine.description %></p>
         </div>
         <div id="mapp" style="padding-top:30px">
-          <h2>Location</h2>
+          <h2><card>Location</card></h2>
           <div
               id="map"
               style="width: 100%;
@@ -38,7 +56,7 @@
             ></div>
         </div>
         <div id="reviews" style="padding-top:30px">
-          <h2>Reviews</h2>
+          <h2><card>Reviews</card></h2>
           <p style="margin:0px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam explicabo magni nam tenetur sapiente similique voluptatem nobis nisi laboriosam. Perferendis vero, totam doloremque omnis ut blanditiis mollitia obcaecati ab esse.</p>
           <p style="margin:0px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam nam, quidem alias iusto pariatur eius inventore, quae ipsa, placeat labore optio sit incidunt magni quod, fugit quas. Aliquam, similique saepe?</p>
         </div>
