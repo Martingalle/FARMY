@@ -86,6 +86,7 @@
   display: flex;
   padding-top: 40px;
   justify-content: space-evenly;
+  align-items: center;
 }
 .price-show {
   &:after {
@@ -131,4 +132,8 @@ input#search.ais-search-box--input {
 .machine-infos {
   display: flex;
   padding-top: 18px;
+  p {
+    margin-left: 0;
+    margin-right: 25px;
+  }
 }
