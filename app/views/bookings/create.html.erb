@@ -1,2 +1,68 @@
-<h1>Bookings#create</h1>
-<p>Find me in app/views/bookings/create.html.erb</p>
+<h1 id="booking" class="text-center">Payment</h1>
+<h2 class="text-center" id="booking-h2">Your customer details</h2>  
+<div class="container">
+  <div class="row col-xs-12 col-sm-6 col-sm-offset-3">
+      <form>
+        <div class="form-group">
+          <label for="formGroupExampleInput">Card details</label>
+          <input type="text" class="form-control input-lg" id="formGroupExampleInput" placeholder="4567-8904-9087">
+        </div>
+        <div class="form-group">
+          <label for="formGroupExampleInput2">CCV</label>
+          <input type="text" class="form-control input-lg" id="formGroupExampleInput2" placeholder="456">
+        </div>
+        <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#myModal">
+          Confirm this booking
+        </button>
+      </form>
+    </div>
+    </div>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="margin-bottom:0;">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">REVIEW YOUR BOOKING INFORMATION</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <ul>
+        <li><strong>PRICE:</strong> <%=@booking_price %>$</li>
+        <li><strong>DURATION:</strong>
+          <ul>
+            <li>From:</li>
+            <li>To:</li>
+          </ul>
+        </li>
+        <li><strong>PICKUP PLACE: 
+          <%= @machine.location %>
+          </strong>
+        </li>
+        <li><strong>OWNER'S EMAIL: <%= @machine.user.email %></strong></li>
+      </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <%= link_to my_machines_path do %>
+          <button type="button" class="btn btn-primary">Confirm this booking</button>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+    <hr class="style-two" style="margin-top:0;">
+    <p class="text-center">...or pay with</p>
+
+    <div class="flex text-center">
+      <span><%= image_tag("stripe.png", size:"300x130")%></span>
+      <span><%= image_tag("paypal.png", size:"300x150")%></span>
+    </div>
+
+<hr class="style-two">
+
+
+
+    
+

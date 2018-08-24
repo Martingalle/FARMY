@@ -16,4 +16,3 @@ algolia();
 import { datepickr } from '../components/flatpickr';
 datepickr();
 
-

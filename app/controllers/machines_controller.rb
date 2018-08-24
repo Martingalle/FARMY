@@ -34,7 +34,6 @@ class MachinesController < ApplicationController
     @user_id = current_user.id
     @machine = Machine.new(machine_params)
     @machine.user_id = @user_id
-    @machine_params = machine_params
     # before_save
     if @machine.save
       redirect_to machine_path(@machine)
@@ -63,7 +62,6 @@ class MachinesController < ApplicationController
     @users = User.all
     @current_user = current_user
     @machines = Machine.all
-
     @machine = Machine.where(user_id: @current_user_id)
   end
 
