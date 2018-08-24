@@ -43,24 +43,33 @@ class MachinesController < ApplicationController
   end
 
   def edit
+    @machine = Machine.find(params[:id])
   end
 
   def update
+    @machine = Machine.find(params[:id])
+    @machine.update(machine_params)
+    redirect_to machine_path(@machine)
   end
 
   def destroy
+    @machine = Machine.find(params[:id])
+    @machine.destroy
+    redirect_to my_machines_path
   end
 
   def list
+    @users = User.all
     @current_user = current_user
-    @current_user_id = current_user.id
+    @machines = Machine.all
+
     @machine = Machine.where(user_id: @current_user_id)
   end
 
   private
 
   def machine_params
-    params.require(:machine).permit(:make, :category, :photo, :force_moteur, :roues_motrices, :price_per_hour, :location, :year)
+    params.require(:machine).permit(:make, :category, :photo, :force_moteur, :roues_motrices, :price_per_hour, :location, :year, :description)
   end
 
 end
