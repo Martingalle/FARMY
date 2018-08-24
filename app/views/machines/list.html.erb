@@ -26,6 +26,9 @@
     <li class="nav-item">
       <a class="nav-link" id="settings-tab" data-toggle="tab" href="#machines" role="tab" aria-controls="settings" aria-selected="false">My Machines</a>
     </li>
+    <li class="nav-item" style="float: right;">
+      <%= link_to 'Log out', destroy_user_session_path %>
+    </li>
   </ul>
 
   <div class="tab-content">

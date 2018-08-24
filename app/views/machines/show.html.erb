@@ -15,6 +15,10 @@
             <!-- If my machine -->
             <% if !current_user.nil? && (@machine.user_id == current_user.id) %>
               <h4>My <%= @machine.category %></h4>
+              <div class="profile-btn">
+                <%= link_to 'Edit', machines_path, class: "btn btn-primary btn-product"  %>
+                <%= link_to 'Delete', machines_path, class: "btn btn-primary btn-product"  %>
+              </div>
             <!-- If not my machine -->
             <% else %>
               <h4><%= @machine.user.name %>'s <%= @machine.category %></h4>
