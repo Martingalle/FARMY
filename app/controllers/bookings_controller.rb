@@ -8,8 +8,12 @@ class BookingsController < ApplicationController
 
   def create
     @machine = Machine.find(params[:machine_id])
-    @booking = Booking.new(booking_params)
-    @booking_price = @machine.price_per_hour * 4
+    @b_start = params[:booking][:duration].split('to').first
+    @b_end = params[:booking][:duration].split('to').last
+    @booking_d = Date.parse(@b_end) - Date.parse(@b_start)
+    @booking_duration = @booking_d.to_i
+    @booking_price = @machine.price_per_hour * @booking_duration
+    @booking = Booking.create(booking_params)
   end
 
   def destroy

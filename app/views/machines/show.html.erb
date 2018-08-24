@@ -129,12 +129,12 @@
             <div class="hours"><%= @machine.min_hours %></div>
           </div>
           <!-- test calendar -->
-          <div class="box-rent">
+          <div class="box-rent flex-row" style="justify-content:space-between; align-items:space-around;">
             <%= simple_form_for [@machine, @booking] do |f| %>
               <div class="datepicker">
                 <%= f.input :duration, label: 'When', as: :string, input_html: { class: 'flatpickr', placeholder: 'Start date -> End date' } %>
               </div>
-              <%= f.submit 'Rent me', class: 'btn btn-primary btn-product' %>
+              <%= f.submit 'Rent me', class: 'btn btn-primary btn-product btn-block' %>
             <% end %>
 
           </div>
