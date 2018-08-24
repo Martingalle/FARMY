@@ -7,7 +7,7 @@ class MachinesController < ApplicationController
     #   @machines = Machine.algolia_search(params[:search])
     #   # Machine.search_by(params[:search]).with_pg_search_highlight
     # else
-      @machines = Machine.all
+    # @machines = Machine.all
     # end
 
     # @machines = Machine.where(latitude: nil, longitude: nil)
