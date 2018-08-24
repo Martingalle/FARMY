@@ -10,7 +10,11 @@ class MachinesController < ApplicationController
     #   {
     #     lat: machine.latitude,
     #     lng: machine.longitude#,
-    #     # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
+    #     # infoWindow: {
+              # content:
+              # render_to_string(
+              #   partial: "/flats/map_box",
+              #   locals: { flat: flat }) }
     #   }
     # end
   end
@@ -62,7 +66,17 @@ class MachinesController < ApplicationController
   private
 
   def machine_params
-    params.require(:machine).permit(:make, :category, :photo, :force_moteur, :roues_motrices, :price_per_hour, :location, :year, :description, :min_hours)
+    params.require(:machine).permit(
+      :make,
+      :category,
+      :photo,
+      :force_moteur,
+      :roues_motrices,
+      :price_per_hour,
+      :location,
+      :year,
+      :description,
+      :min_hours)
   end
 
 end

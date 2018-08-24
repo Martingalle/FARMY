@@ -12,7 +12,7 @@ function algolia() {
       // Replace with your own values
       appId: 'SKX89A4FJH',
       apiKey: '5e4b8fadac63630bef14ead37e3e97d4', // search only API key, no ADMIN key
-      indexName: 'Machine_development',
+      indexName: 'Machine_production',
       routing: true,
       searchParameters: {
         hitsPerPage: 10
