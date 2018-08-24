@@ -1,12 +1,38 @@
 <div id="headnav" class="navbar-wagon">
   <!-- Logo -->
-  <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%= image_tag "logo.svg", height: 50 %>
-  <% end %>
+  <div class="logo-nav">
+    <%= link_to root_path, class: "navbar-wagon-brand" do %>
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 600 300">
+
+        <!-- Symbol -->
+        <symbol id="s-text">
+          <text text-anchor="middle"
+                  x="50%" y="50%" dy=".em">
+              FARMY
+           </text>
+        </symbol>
+
+        <!-- Duplicate symbols -->
+        <use xlink:href="#s-text" class="text"
+                  ></use>
+        <use xlink:href="#s-text" class="text"
+                  ></use>
+        <use xlink:href="#s-text" class="text"
+                  ></use>
+        <use xlink:href="#s-text" class="text"
+                  ></use>
+        <use xlink:href="#s-text" class="text"
+                  ></use>
+
+      </svg>
+    <% end %>
+  </div>
   <%= form_tag(machines_path, :method => "get", id: "search-form") do %>
     <%= image_tag "search.svg", height: 22 %>
-    <%= text_field_tag :search, params[:search], placeholder: "I want to rent a tractor.." %>
+    <%= text_field_tag :search, params[:search], placeholder: "Tractor Lyon"  %>
   <% end %>
+
+  <input type="text" id="search">
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm pullDown">
@@ -19,9 +45,9 @@
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
-        <div class="dropdown">
+        <div class="">
           <%= link_to my_machines_path do %>
-          <%= image_tag "https://avatars2.githubusercontent.com/u/39128210?s=460&v=4", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+            <%= cl_image_tag current_user.photo, height: 50, width: 50, class: "avatar-cloudinary dropdown-toggle" %>
           <% end %>
           <!-- <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>

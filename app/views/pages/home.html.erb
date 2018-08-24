@@ -4,13 +4,13 @@
     <p id="catchline">In the right place, at the right price</p>
     <%= form_tag(machines_path, :method => "get", id: "search-home") do %>
       <%= image_tag "search.svg", height: 22 %>
-      <%= text_field_tag :search, params[:search], placeholder: "I want to rent a tractor.." %>
+      <%= text_field_tag :search, params[:search], placeholder: "Tractor Lyon" %>
     <% end %>
   </div>
 </div>
 <div class="container-fluid background">
   <div class="row" style="position: relative;">
-    <h2 class="text-center"><mark>Why use FARMY?</mark></h2>
+    <h2 class="text-center"><card>Why use FARMY?</card></h2>
     <!-- First row -->
     <div class="row flex-row flex-wrap ">
       <!-- info-box -->
@@ -61,17 +61,25 @@
   <h2>To prefer <strong>leasing</strong> to debt is <br>to <strong>preserve</strong> your cash flow.</h2>
 </div>
 <div class="container home">
-  <h2 class="text-center"><mark>Our lastest equipments</mark></h2>
+  <h2 class="text-center"><card>Our lastest equipments</card></h2>
   <% @machines.first(6).each do |machine| %>
     <div class="col-xs-12 col-sm-6 col-md-6">
       <%= link_to machine_path(machine) do %>
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= machine.photo %>');">
-        <div class="card-category"><%= machine.category %></div>
-        <div class="card-description">
-          <h2><%= machine.make %></h2>
-          <p><%= machine.location %></p>
+      <div class="full-card">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= machine.photo %>');"></div>
+        <div class="card-infos">
+          <div class="card-category">
+            <div class="machine-type">
+              <h2><card><%= machine.category %></card></h2><%= machine.make %>
+            </div>
+            <div class="price">
+              $<%= machine.price_per_hour %>
+            </div>
+          </div>
+          <div class="card-description">
+            <p><%= machine.location %></p>
+          </div>
         </div>
-        <img class="card-user" src="https://avatars2.githubusercontent.com/u/39128210?s=460&v=4">
       </div>
       <% end %>
     </div>

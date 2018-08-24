@@ -2,22 +2,9 @@
 <h1>My dashboard</h1>
 <p><strong>See</strong> and <strong>manage</strong> your bookings as a user and owner</p>
 
-<ul>
-  <li><%= @current_user.name %></li>
-  <li><%= @current_user.email %>
-  <li><%= @current_user.machines%>
-  </li>
-
-  <li><%=@current_user.machines.each do |b|%>
-    <li>b</li>
-    <%end%>
-  <li><%=@users%></li>
-  <li><%=@machines%></li>
-</ul>
-
 <div class="container dashboard">
   <ul class="nav nav-tabs" id="myTab" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item active">
       <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Profile</a>
     </li>
     <li class="nav-item">
@@ -25,6 +12,9 @@
     </li>
     <li class="nav-item">
       <a class="nav-link" id="settings-tab" data-toggle="tab" href="#machines" role="tab" aria-controls="settings" aria-selected="false">My Machines</a>
+    </li>
+    <li class="nav-item" style="float: right;">
+      <%= link_to('Log out', destroy_user_session_path, method: :delete) %>
     </li>
   </ul>
 
@@ -37,40 +27,45 @@
         <div class="earnings">
           <span>Number of bookings as an owner: <%= @current_user.owner_bookings.count %>
           </span>
-          <span>
-            <%= @current_user.owner_bookings.each do |b| %>
-              <% sum = 0 %>
-              <% sum += b.price %>
-              <li> <%= sum %></li>
-            <% end %>
-          </span>
         </div>
       </div>
     </div>
     <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab"></div>
-    <div class="tab-pane" id="machines" role="tabpanel" aria-labelledby="settings-tab">...</div>
+    <div class="tab-pane" id="machines" role="tabpanel" aria-labelledby="settings-tab">
+      <% @current_user.machines.each do |machine| %>
+        <div class="products">
+          <div class='products-upvote'>
+            <div class="products-arrow"></div>
+            <div class='products-count'>5</div>
+          </div>
+          <%= link_to machine_path(machine) do %>
+            <%= cl_image_tag machine.photo, alt: "alttext", class: "products-image hidden-xs" %>
+          <% end %>
+          <div class='products-body'>
+            <%= link_to machine_path(machine) do %>
+              <h3><%= machine.category %></h3>
+              <p><%= machine.make %></p>
+            <% end %>
+          </div>
+          <ul class="list-inline products-controls hidden-sm hidden-xs">
+            <li>
+              <%= link_to edit_machine_path(machine) do %>
+                <i class="fa fa-edit"></i>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to machine_path(machine), data: {:confirm => 'Are you sure?'}, :method => :delete do %>
+                <i class="fa fa-trash-alt"></i>
+              <% end %>
+            </li>
+          </ul>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
-
+<div class="bottom">
   <div class="referral text-center">
     <h2>Refer a friend and enter our sweepstakes to win a brand new John Deere</h2>
   </div>
-
-
-<script>
-$('#home-tab a').on('click', function (e) {
-  e.preventDefault()
-  $(this).tab('show')
-  console.log(this)
-})
-$('#profile-tab a').on('click', function (e) {
-  e.preventDefault()
-  $(this).tab('show')
-})
-$('#messages-tab a').on('click', function (e) {
-  e.preventDefault()
-  $(this).tab('show')
-})
-
-
-</script>
+</div>

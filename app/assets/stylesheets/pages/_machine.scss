@@ -92,13 +92,24 @@ h1{
   display: flex;
   padding-top: 40px;
   justify-content: space-evenly;
+  align-items: center;
 }
-.price {
+.price-show {
   &:after {
     content: '/hour';
     font-size: 10px;
     position: absolute;
     top: 18px;
+  }
+}
+.hours {
+  margin-right: 35px;
+  &:after {
+    content: '/hours min';
+    font-size: 10px;
+    position: absolute;
+    top: 18px;
+    margin-right: 28px;
   }
 }
 .form-control-label {
@@ -107,7 +118,56 @@ h1{
   }
 }
 
-.row{
-  margin-top: 50px !important;
+.ais-search-box--powered-by {
+  display: none;
 }
-
+input#search.ais-search-box--input {
+    width: 500px!important;
+    height: 50px!important;
+    box-shadow: none;
+}
+.ais-search-box--magnifier {
+  display: none;
+}
+.ais-search-box--reset {
+  display: none;
+}
+.ais-hits.ais-hits__empty {
+  padding: 54px;
+  text-align: center;
+}
+.machine-infos {
+  display: flex;
+  padding-top: 18px;
+  p {
+    margin-left: 0;
+    margin-right: 20px;
+  }
+}
+.profile-btn {
+  display: flex;
+  margin-left: 25px;
+  .btn {
+    padding: 5px 30px !important;
+    margin-right: 15px;
+    margin-left: 10px;
+  }
+  .btn-product {
+    width: 110px;
+    background: white;
+    border: 1px solid $purple;
+    color: $purple;
+    &:hover {
+      background: $purple;
+      border: 1px solid $purple;
+      color: $white;
+    }
+  }
+}
+.user-infos {
+  display: flex;
+  align-items: baseline;
+  h4 {
+    margin-right: 25px;
+  }
+}
