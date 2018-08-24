@@ -72,8 +72,9 @@ cities = ["Nevers", "Bourgoin-Jallieu", "Dinard", "Auxerre", "Nantua", "Cassis",
   Architecto nam excepturi eaque cumque ipsum libero nobis fugit culpa, nemo, expedita rem voluptas. Eaque, laudantium? Quam saepe optio porro animi ea numquam delectus tempore reiciendis corrupti, cum, repudiandae voluptatibus."
   minHours = rand(5..24)
   force_moteur = rand(50..400)
+  roues_motrices = [2,4].sample
   price = rand(20..200)
-  machine = Machine.create!(make: make, location: location, user_id: ids.sample, year:year, category: category, force_moteur:force_moteur, price_per_hour:price, remote_photo_url: "https://res.cloudinary.com/ehrsatz/image/upload/#{photo}.jpg", description: description, min_hours:minHours)
+  machine = Machine.create!(make: make, location: location, user_id: ids.sample, year:year, category: category, force_moteur:force_moteur, price_per_hour:price, remote_photo_url: "https://res.cloudinary.com/ehrsatz/image/upload/#{photo}.jpg", description: description, min_hours:minHours, roues_motrices: roues_motrices)
 end
 
 puts 'finished creating the machines'

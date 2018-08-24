@@ -6,53 +6,35 @@
 }
 
 .dashboard{
-  border: 1px solid rgba(60,60,60,0.3);
-  box-shadow: 3px 5px 17px rgba(0,0,0, 0.7);
-  height:90vh;
-  margin-bottom: 3em;
-}
+    border: 1px solid #75E4AF;
+    width: 90vw !important;
+    box-shadow: 3px 5px 17px #75E4AF;
+    height:90vh;
+    margin-bottom: 3em;
+    padding:10px;
+  }
 
-#main{
-  grid-row: 1 / span 1;
-  grid-column: 1 / span 1;
-  display:flex;
-  align-items: center;
-  flex-direction: column;
+ .profile{
+   width:100%;
+   align-items:center;
+   
+ }
   
-}
-
-#main p{
-  font-size: 14px;
-  margin: 0;
-}
 
 .referral{
-  background-image: asset-url('u.jpg');
+  background-image: url('https://res.cloudinary.com/ehrsatz/image/upload/v1534854269/imvxvgrkpf2p8byiwsrs.jpg');
   height:400px;
   background-position: center;
   background-size: cover;
   background-position: fixed;
-  color:white;
+  color: white;
   display:flex;
   align-items:center;
   padding: 0 20px;
 }
+
 .earnings{
 }
-
-.profile-image{
-  height:100px;
-  width:100px;
-  background-size: cover;
-  margin-bottom: 10px;
-}
-
-// .nav li a{
-//  color:#766F75;
-// }
-
-// .nav > li.active {
-// }
 
 
 
@@ -112,3 +94,7 @@
   color: lightgrey;
 }
 
+
+.nav-item a{
+  color:black;
+}
