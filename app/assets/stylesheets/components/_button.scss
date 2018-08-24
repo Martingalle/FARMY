@@ -88,3 +88,19 @@
   background-color: $purple!important;
   border-color: $purple!important;
 }
+
+.btn-product-inverted {
+  color: $purple;
+  background-color: $white!important;
+  border-color: $purple!important;
+}
+.btn-product-inverted:focus-within {
+  color: $purple;
+  background-color: $white!important;
+  border-color: $purple!important;
+}
+.btn-product-inverted:active {
+  color: $purple;
+  background-color: $white!important;
+  border-color: $purple!important;
+}

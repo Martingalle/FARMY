@@ -7,8 +7,9 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @machine.id = @machine_id
+    @machine = Machine.find(params[:machine_id])
     @booking = Booking.new(booking_params)
+    @booking_price = @machine.price_per_hour * 4
   end
 
   def destroy

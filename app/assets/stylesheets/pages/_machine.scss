@@ -1,6 +1,11 @@
+h1{
+  margin-top:0;
+}
+
 .container .img img {
   width: 100%;
   height: auto;
+  margin-top:0;
 }
 .tophead {
   display: flex;
@@ -26,6 +31,7 @@
     background-color: #14bea0;
     color: #fff;
 }
+
 .left-nav {
   display: flex;
   padding-left: 3px;
@@ -111,6 +117,7 @@
     visibility: hidden;
   }
 }
+
 .ais-search-box--powered-by {
   display: none;
 }
