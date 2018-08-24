@@ -87,7 +87,7 @@
   padding-top: 40px;
   justify-content: space-evenly;
 }
-.price {
+.price-show {
   &:after {
     content: '/hour';
     font-size: 10px;
@@ -95,8 +95,40 @@
     top: 18px;
   }
 }
+.hours {
+  margin-right: 35px;
+  &:after {
+    content: '/hours min';
+    font-size: 10px;
+    position: absolute;
+    top: 18px;
+    margin-right: 28px;
+  }
+}
 .form-control-label {
   abbr {
     visibility: hidden;
   }
+}
+.ais-search-box--powered-by {
+  display: none;
+}
+input#search.ais-search-box--input {
+    width: 500px!important;
+    height: 50px!important;
+    box-shadow: none;
+}
+.ais-search-box--magnifier {
+  display: none;
+}
+.ais-search-box--reset {
+  display: none;
+}
+.ais-hits.ais-hits__empty {
+  padding: 54px;
+  text-align: center;
+}
+.machine-infos {
+  display: flex;
+  padding-top: 18px;
 }

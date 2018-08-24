@@ -10,5 +10,10 @@ stickyNavigation();
 import { autocomplete } from '../components/autocomplete';
 autocomplete();
 
+import { algolia } from '../components/app';
+algolia();
+
 import { datepickr } from '../components/flatpickr';
 datepickr();
+
+
