@@ -29,18 +29,17 @@
       </div>
       <div class="modal-body">
       <ul>
-        <li><strong>PRICE:</strong> <%=@booking_price %>$</li>
-        <li><strong>DURATION:</strong>
+        <li><strong>PRICE:</strong> <%=@booking_price%> $</li>
+        <li><strong>DURATION:</strong> <%=@booking_duration %> hours
           <ul>
-            <li>From:</li>
-            <li>To:</li>
+            <li>From: <%=@b_start %></li>
+            <li> To: <%=@b_end %></li>
           </ul>
         </li>
-        <li><strong>PICKUP PLACE: 
+        <li><strong>PICKUP PLACE:  </strong>
           <%= @machine.location %>
-          </strong>
         </li>
-        <li><strong>OWNER'S EMAIL: <%= @machine.user.email %></strong></li>
+        <li><strong>OWNER'S EMAIL: </strong> <%= @machine.user.email %>></li>
       </ul>
       </div>
       <div class="modal-footer">

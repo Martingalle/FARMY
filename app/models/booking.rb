@@ -4,3 +4,4 @@ class Booking < ApplicationRecord
   validates :price, presence: true
   validates :duration, presence: true
 end
+    
