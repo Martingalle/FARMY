@@ -1,7 +1,9 @@
 <%= render 'shared/navproduct' %>
+
 <div class="container" id="top">
   <div class="row" style="margin-top: 100px;">
     <div class="product">
+    <h1>Rent this <%= @machine.make%> <%=@machine.category%></h1>
       <div class="col-xs-12 col-md-8" style="margin-bottom: 50px;">
         <div class="img">
           <%= cl_image_tag @machine.photo, width: 600, crop: 'scale' %>
@@ -16,18 +18,19 @@
             <p><%= @machine.category %></p>
           </div>
           <div class="category">
-            <p>Category:</p>
-            <p><%= @machine.category %></p>
+            <p>Engine Power (bhp):</p>
+            <p><%= @machine.force_moteur %></p>
           </div>
           <div class="category">
-            <p>Category:</p>
-            <p><%= @machine.category %></p>
+            <p>Driven Wheels:</p>
+            <p><%= @machine.roues_motrices %></p>
           </div>
         </div>
         <div id="desc" style="padding-top:30px">
           <h2>Description</h2>
-          <p style="margin:0px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam explicabo magni nam tenetur sapiente similique voluptatem nobis nisi laboriosam. Perferendis vero, totam doloremque omnis ut blanditiis mollitia obcaecati ab esse.</p>
-          <p style="margin:0px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam nam, quidem alias iusto pariatur eius inventore, quae ipsa, placeat labore optio sit incidunt magni quod, fugit quas. Aliquam, similique saepe?</p>
+          <p style="margin:0px">
+          <%= @machine.description %></p>
+
         </div>
         <div id="mapp" style="padding-top:30px">
           <h2>Location</h2>
@@ -52,7 +55,7 @@
           </div>
           <!-- test calendar -->
           <div class="box-rent">
-            <%= simple_form_for (@booking) do |f| %>
+            <%= simple_form_for [@machine, @booking] do |f| %>
               <div class="datepicker">
                 <%= f.input :duration, label: 'When', as: :string, input_html: { class: 'flatpickr', placeholder: 'Start date -> End date' } %>
               </div>

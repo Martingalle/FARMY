@@ -12,3 +12,4 @@ autocomplete();
 
 import { datepickr } from '../components/flatpickr';
 datepickr();
+

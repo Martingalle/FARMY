@@ -1,7 +1,17 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-12">
-      <h1>Machines#edit</h1>
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2 text-center">
+      <h1>Edit Your <%=@machine.make %> </h1>
+      <%= simple_form_for(@machine) do |f| %>
+        <%= f.input :make %>
+        <%= f.input :year %>
+        <%= f.input :min_hours %>
+        <%= f.input :category %>
+        <%= f.input :location %>
+        <%= f.input :price_per_hour %>
+        <%= f.input :photo %>
+        <%= f.button :submit, class: 'btn btn-primary btn-product' %>
+      <% end %>
     </div>
   </div>
 </div>
