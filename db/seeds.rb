@@ -17,7 +17,7 @@ User.destroy_all
 50.times do |user|
   name= Faker::Name.name
   email= Faker::Internet.email
-  password= Faker::Internet.password
+  password= "qwerty"
   photo = ["v1535031320/xrisehr0xpwyngpw5zw9",  "v1535031316/sswi3yzreldzlserzt82",
     "v1535031313/shiyyudanpgwqovf7fgo",
     "v1535031308/dloyy6xwknfjj5xxnaim",

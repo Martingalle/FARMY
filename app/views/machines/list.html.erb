@@ -2,19 +2,6 @@
 <h1>My dashboard</h1>
 <p><strong>See</strong> and <strong>manage</strong> your bookings as a user and owner</p>
 
-<!-- <ul>
-  <li><%= @current_user.name %></li>
-  <li><%= @current_user.email %>
-  <li><%= @current_user.machines%>
-  </li>
-
-  <li><%=@current_user.machines.each do |b|%>
-    <li>b</li>
-    <%end%>
-  <li><%=@users%></li>
-  <li><%=@machines%></li>
-</ul> -->
-
 <div class="container dashboard">
   <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item active">
@@ -27,7 +14,7 @@
       <a class="nav-link" id="settings-tab" data-toggle="tab" href="#machines" role="tab" aria-controls="settings" aria-selected="false">My Machines</a>
     </li>
     <li class="nav-item" style="float: right;">
-      <%= link_to 'Log out', destroy_user_session_path %>
+      <%= link_to('Log out', destroy_user_session_path, method: :delete) %>
     </li>
   </ul>
 
@@ -51,10 +38,14 @@
             <div class="products-arrow"></div>
             <div class='products-count'>95</div>
           </div>
-          <%= cl_image_tag machine.photo, alt: "alttext", class: "products-image hidden-xs" %>
+          <%= link_to machine_path(machine) do %>
+            <%= cl_image_tag machine.photo, alt: "alttext", class: "products-image hidden-xs" %>
+          <% end %>
           <div class='products-body'>
-            <h3><%= machine.category %></h3>
-            <p><%= machine.make %></p>
+            <%= link_to machine_path(machine) do %>
+              <h3><%= machine.category %></h3>
+              <p><%= machine.make %></p>
+            <% end %>
           </div>
           <ul class="list-inline products-controls hidden-sm hidden-xs">
             <li>
@@ -73,7 +64,8 @@
     </div>
   </div>
 </div>
-
+<div class="bottom">
   <div class="referral text-center">
     <h2>Refer a friend and enter our sweepstakes to win a brand new John Deere</h2>
   </div>
+</div>

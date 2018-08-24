@@ -9,8 +9,12 @@
 /* Body design */
 .products-body {
   flex: 1 1 auto;
+  h2 {
+    color: $brown;
+  }
 }
 .products-body h3 {
+  color: $brown;
   font-weight: bold;
   font-size: 23px;
   margin-top: 0;
@@ -36,6 +40,7 @@
   font-weight: bold;
   font-size: 13px;
   line-height: 20px;
+  color: $purple;
 }
 .products-count {
   margin: 2px 0 0;
@@ -47,7 +52,7 @@
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
   border-top: 6px solid transparent;
-  border-bottom: 9px solid black;
+  border-bottom: 9px solid $purple;
   border-radius: 2px;
   margin: auto;
 }
