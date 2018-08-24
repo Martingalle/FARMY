@@ -6,9 +6,9 @@
 }
 
 .dashboard{
-    border: 1px solid #75E4AF;
+    border: 1px solid #f1f1f1;
     width: 90vw !important;
-    box-shadow: 3px 5px 0px #75E4AF;
+    box-shadow: 5px 5px 0px #75E4AF;
     height:90vh;
     margin-bottom: 3em;
     padding:10px;
@@ -17,6 +17,7 @@
  .profile{
    width:100%;
    align-items:center;
+   padding: 50px;
  }
 
 
@@ -28,14 +29,24 @@
   background-position: fixed;
   color: white;
   display:flex;
-  align-items:center;
+  justify-content: center;
+  align-items: center;
   padding: 0 20px;
+  width: 90.8%;
+  box-shadow: 5px 5px 0px #75E4AF;
+  transition: 0.5s;
+  transform-style: preserve-3d;
 }
+
 
 .earnings{
 }
 
-
+.bottom {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 70px;
+}
 
 .message {
   display: flex;
@@ -95,5 +106,5 @@
 
 
 .nav-item a{
-  color:black;
+  color:$brown;
 }

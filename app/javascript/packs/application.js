@@ -16,3 +16,5 @@ algolia();
 import { datepickr } from '../components/flatpickr';
 datepickr();
 
+import { bindSweetAlertButtonDemo } from '../components/sweetalert';
+bindSweetAlertButtonDemo();

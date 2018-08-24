@@ -146,11 +146,22 @@ input#search.ais-search-box--input {
 }
 .profile-btn {
   display: flex;
-  width: 21%;
-  margin-left: 90px;
+  margin-left: 25px;
   .btn {
-    padding: 5px 30px!important;
+    padding: 5px 30px !important;
     margin-right: 15px;
+    margin-left: 10px;
+  }
+  .btn-product {
+    width: 110px;
+    background: white;
+    border: 1px solid $purple;
+    color: $purple;
+    &:hover {
+      background: $purple;
+      border: 1px solid $purple;
+      color: $white;
+    }
   }
 }
 .user-infos {

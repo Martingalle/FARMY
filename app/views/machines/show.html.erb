@@ -20,7 +20,7 @@
               <h4>My <%= @machine.category %></h4>
               <div class="profile-btn">
                 <%= link_to 'Edit', edit_machine_path(@machine), class: "btn btn-primary btn-product"  %>
-                <%= link_to 'Delete', machine_path(@machine), class: "btn btn-primary btn-product"  %>
+                <%= link_to 'Delete', machine_path(@machine), id: 'delete', class: "btn btn-primary btn-product", :method => :delete %>
               </div>
             <!-- If not my machine -->
             <% else %>
