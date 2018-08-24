@@ -3,11 +3,12 @@ class MachinesController < ApplicationController
 
   def index
     # raise
-    if params[:search].present?
-      @machines = Machine.search_by(params[:search]).with_pg_search_highlight
-    else
+    # if params[:search].present?
+    #   @machines = Machine.algolia_search(params[:search])
+    #   # Machine.search_by(params[:search]).with_pg_search_highlight
+    # else
       @machines = Machine.all
-    end
+    # end
 
     # @machines = Machine.where(latitude: nil, longitude: nil)
 
@@ -67,7 +68,7 @@ class MachinesController < ApplicationController
   private
 
   def machine_params
-    params.require(:machine).permit(:make, :category, :photo, :force_moteur, :roues_motrices, :price_per_hour, :location, :year, :description)
+    params.require(:machine).permit(:make, :category, :photo, :force_moteur, :roues_motrices, :price_per_hour, :location, :year, :description, :min_hours)
   end
 
 end
