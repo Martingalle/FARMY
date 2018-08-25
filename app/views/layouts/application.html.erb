@@ -24,6 +24,7 @@
     <%= stylesheet_pack_tag 'application' %>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.1/dist/instantsearch.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.1/dist/instantsearch-theme-algolia.min.css">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.css' rel='stylesheet' />
   </head>
   <body>
     <%= render 'shared/navbar' %>
@@ -33,6 +34,6 @@
     <%= javascript_include_tag 'application' %>
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV["GOOGLE_API_FRONT"]}&libraries=places" %>
     <%= javascript_pack_tag 'application' %>
-    <%= javascript_pack_tag "map" %>
+    <%= javascript_pack_tag "maps" %>
   </body>
 </html>

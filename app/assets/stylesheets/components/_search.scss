@@ -1,0 +1,17 @@
+search {
+    color: #786f76;
+    background: transparent;
+    position: relative;
+    padding: 0;
+    z-index: 0;
+  &:before {
+    height: 10px;
+    left: 0px;
+    right: 0px;
+    background-color: #3FE8AB;
+    content: " ";
+    position: absolute;
+    z-index: -2;
+    bottom: 0;
+  }
+}

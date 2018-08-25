@@ -2,26 +2,31 @@ class MachinesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @machines = Machine.all
+    # @machines = Machine.all
 
-    # @machines = Machine.where(latitude: nil, longitude: nil)
+    @machines = Machine.where.not(latitude: nil, longitude: nil)
 
-    # @markers = @machines.map do |machine|
-    #   {
-    #     lat: machine.latitude,
-    #     lng: machine.longitude#,
-    #     # infoWindow: {
+    @markers = @machines.map do |machine|
+      {
+        lat: machine.latitude,
+        lng: machine.longitude#,
+        # infoWindow: {
               # content:
               # render_to_string(
               #   partial: "/flats/map_box",
               #   locals: { flat: flat }) }
-    #   }
-    # end
+      }
+    end
   end
 
   def show
-    @machine = Machine.find(params[:id])
     @booking = Booking.new
+    @machine = Machine.find(params[:id])
+    @markers =
+      [{
+        lat: @machine.latitude,
+        lng: @machine.longitude
+      }]
   end
 
   def new

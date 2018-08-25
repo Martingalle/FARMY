@@ -35,7 +35,7 @@ function algolia() {
         container: '#hits',
         templates: {
           item: document.getElementById('hit-template').innerHTML,
-          empty: "We didn't find any results for the search <em>\"{{query}}\"</em>"
+          empty: "We didn't find any results for the search <search>\"{{query}}\"</search>"
         }
       })
     );
