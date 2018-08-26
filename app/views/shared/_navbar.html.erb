@@ -1,32 +1,7 @@
 <div id="headnav" class="navbar-wagon">
   <!-- Logo -->
-  <div class="logo-nav">
-    <%= link_to root_path, class: "navbar-wagon-brand" do %>
-      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 600 300">
-
-        <!-- Symbol -->
-        <symbol id="s-text">
-          <text text-anchor="middle"
-                  x="50%" y="50%" dy=".em">
-              FARMY
-           </text>
-        </symbol>
-
-        <!-- Duplicate symbols -->
-        <use xlink:href="#s-text" class="text"
-                  ></use>
-        <use xlink:href="#s-text" class="text"
-                  ></use>
-        <use xlink:href="#s-text" class="text"
-                  ></use>
-        <use xlink:href="#s-text" class="text"
-                  ></use>
-        <use xlink:href="#s-text" class="text"
-                  ></use>
-
-      </svg>
-    <% end %>
-  </div>
+  <%= link_to image_tag("farmy.svg", alt: "farmy logo", class: 'logo'), action: 'home', controller: 'pages' %>
+  <!-- Search -->
   <%= form_tag(machines_path, :method => "get", id: "search-form") do %>
     <%= image_tag "search.svg", height: 22 %>
     <%= text_field_tag :search, params[:search], placeholder: "Tractor Lyon"  %>

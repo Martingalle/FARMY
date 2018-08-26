@@ -4,3 +4,7 @@
 .mapboxgl-ctrl-bottom-right {
   display: none;
 }
+.marker {
+  background-image: asset-data-url("pin.svg");
+  background-repeat: no-repeat;
+}
