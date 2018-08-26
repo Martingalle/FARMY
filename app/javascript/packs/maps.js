@@ -1,6 +1,6 @@
 import mapboxgl from "mapbox-gl/dist/mapbox-gl.js";
 
-mapboxgl.accessToken = process.env.MAPBOX;
+mapboxgl.accessToken = 'pk.eyJ1IjoiYW50aG9ueWxudCIsImEiOiJjamw5Z3ViZ3gwYjdwM3BvNW4wazBtc3EzIn0.-DZt62XvxGWU3X2RGZxD_g';
 
 const mapElement = document.querySelector('#map');
 
