@@ -1,11 +1,8 @@
-
-
-
 #name {
   font-size:2em;
 }
 
-.dashboard{
+.dashboard {
     border: 1px solid #f1f1f1;
     width: 90vw !important;
     box-shadow: 5px 5px 0px #75E4AF;
@@ -14,14 +11,12 @@
     padding:10px;
   }
 
- .profile{
+ .profile {
    width:100%;
    align-items:center;
    padding: 50px;
  }
-
-
-.referral{
+.referral {
   background-image: url('https://res.cloudinary.com/ehrsatz/image/upload/v1534854269/imvxvgrkpf2p8byiwsrs.jpg');
   height:400px;
   background-position: center;
@@ -37,17 +32,11 @@
   transition: 0.5s;
   transform-style: preserve-3d;
 }
-
-
-.earnings{
-}
-
 .bottom {
   display: flex;
   justify-content: center;
   margin-bottom: 70px;
 }
-
 .message {
   display: flex;
   align-items: center;
@@ -103,8 +92,6 @@
 .status.pending {
   color: lightgrey;
 }
-
-
 .nav-item a{
   color:$brown;
 }

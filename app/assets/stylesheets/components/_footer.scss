@@ -1,4 +1,4 @@
-.footer{
+.footer {
   display:flex;
   flex-direction: row;
   height: 25vh;
@@ -13,6 +13,23 @@
   p {
     margin: 0;
   }
+  a {
+  text-transform: capitalize;
+  text-decoration: none;
+  color: rgba(250,250,250,1);
+  margin: 0;
+    &:hover {
+     text-decoration: none;
+     color: rgba(255,255,255,1);
+    }
+  }
+  ul {
+    padding-left:0;
+  }
+  i {
+    color:white;
+    font-size: 25px;
+  }
 }
 #row-1 > ul {
   margin: 0;
@@ -24,34 +41,11 @@
   margin: 0;
 }
 
-.footer #row-1, .footer #row-2, .footer #row3, ul{
+.footer #row-1, .footer #row-2, .footer #row3, ul {
   list-style: none;
-
 }
-
-a{
-text-transform: capitalize;
-text-decoration: none;
-color: rgba(250,250,250,1);
-margin: 0;
-
- &:hover{
-   text-decoration: none;
-   color: rgba(255,255,255,1);
- }
-}
-
-ul{
-  padding-left:0;
-}
-
-i{
-  color:white;
-  font-size: 25px;
-}
-
 @media only screen and (max-width: 700px) {
-  .footer{
+  .footer {
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -59,18 +53,15 @@ i{
     height:40vh;
     padding-top:20px;
   }
-
-  .farmy{
+  .farmy {
     display:none;
   }
 }
-
 .footer #row-1, .footer #row-2, .footer #row3, i {
-
- &:hover{
+  &:hover {
    text-decoration: none;
    color: white;
- }
+  }
 }
 .farmy {
   display:flex;
@@ -78,16 +69,31 @@ i{
 }
 .img-footer {
   position: absolute;
-  top: -50px;
+  top: 0px;
   left: 0px;
+  height: 50px;
   animation: tractomoov 12s infinite;
 }
 
 @keyframes tractomoov {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(2500%);
-    }
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(2000px);
+  }
+}
+#footer-svg path {
+  fill: $white;
+}
+.navbar-wagon-brand {
+  svg {
+    width: 120px;
+    margin-left: 2px;
+  }
+}
+.sub-footer {
+  position: relative;
+  overflow: hidden;
+  height: 50px;
 }
